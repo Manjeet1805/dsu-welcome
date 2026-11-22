@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Watch the video and apply | DSU Platinum</title>
+  <meta name="description" content="Watch Manjeet's short video and apply for your free strategy call with DSU Platinum.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M18 14h16c12 0 18 7 18 18s-6 18-18 18H18z' fill='none' stroke='%23fff' stroke-width='6'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="spot" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="https://www.dsuplatinum.com/" class="logo" aria-label="DSU Platinum">
+      <img src="https://cdn.prod.website-files.com/6903501b60929efb62226035/692466f0303b6df5edd52e25_dsu-platinum-logo.png"
+           alt="DSU Platinum" width="165" height="48"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'logo-fallback',textContent:'DSU PLATINUM'}))">
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="h1">Watch this short video, then apply for your <em>free strategy call</em></h1>
+      <p class="lead reveal" style="--d:.5s">Manjeet shows you how the Platinum mentoring works and what happens after you apply. Press play, then fill out the short form right below the video.</p>
+    </section>
+
+    <div class="marquee reveal" style="--d:.6s" aria-hidden="true">
+      <div class="track">
+        <span>Watch the video</span><i></i><span>Fill out the form</span><i></i><span>Book your free call</span><i></i>
+        <span>Watch the video</span><i></i><span>Fill out the form</span><i></i><span>Book your free call</span><i></i>
+        <span>Watch the video</span><i></i><span>Fill out the form</span><i></i><span>Book your free call</span><i></i>
+        <span>Watch the video</span><i></i><span>Fill out the form</span><i></i><span>Book your free call</span><i></i>
+      </div>
+    </div>
+
+    <section class="video-section reveal" id="videoSection" aria-label="Video" style="--d:.1s">
+      <div class="step-label"><span class="num">01</span> Watch the video</div>
+      <div class="frame">
+        <div class="player" id="player">
+          <video id="video" playsinline preload="metadata"></video>
+          <button class="play-overlay" id="playBtn" type="button" aria-label="Play video with sound">
+            <span class="play-circle"><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+            <span class="play-text">Play with sound</span>
+          </button>
+          <div class="video-error" id="videoError" hidden>The video could not be loaded. Please reload the page.</div>
+        </div>
+      </div>
+      <p class="hint">About 2 minutes. Sound on.</p>
+      <a href="#apply" class="btn btn-primary btn-magnetic" id="toForm">
+        <span>I watched it. Take me to the form</span>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </section>
+
+    <section class="steps" aria-label="How it works">
+      <div class="card reveal" style="--d:0s"><span class="big">01</span><h3>Watch the video</h3><p>It only takes a few minutes and answers the most important questions.</p></div>
+      <div class="card reveal" style="--d:.12s"><span class="big">02</span><h3>Fill out the form</h3><p>A few quick questions so we can see if we're a good fit.</p></div>
+      <div class="card reveal" style="--d:.24s"><span class="big">03</span><h3>We get back to you</h3><p>Our team reviews your application and contacts you with the next steps.</p></div>
+    </section>
+
+    <section class="apply" id="apply">
+      <div class="step-label center reveal"><span class="num">02</span> Apply for your free strategy call</div>
+      <h2 class="reveal" style="--d:.08s">Tell us a bit about <em>yourself</em></h2>
+      <p class="sub reveal" style="--d:.16s">100% free and non-binding. Answer the questions below and we'll take it from there.</p>
+      <div class="frame reveal" style="--d:.2s">
+        <div class="form-card">
+          <div id="typeform" class="typeform-host" aria-live="polite">
+            <p class="form-loading">Loading the form …</p>
+          </div>
+        </div>
+      </div>
+      <p class="form-fallback" id="formFallback" hidden>
+        The form doesn't show up? <a id="formLink" href="#" target="_blank" rel="noopener">Open it in a new tab</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Results vary from person to person, are not typical and cannot be guaranteed. This offer is directed exclusively at business owners and commercial traders.</p>
+    <p class="copy">&copy; <span id="year">2026</span> SWISS MEDIA FZCO, Dubai. All rights reserved.</p>
+  </footer>
+
+  <a href="#apply" class="sticky-cta" id="stickyCta" aria-label="Go to the application form">
+    Apply for your free call
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+  <script src="https://embed.typeform.com/next/embed.js" async onload="window.__tfReady && window.__tfReady()"></script>
+</body>
+</html>
