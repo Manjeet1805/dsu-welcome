@@ -161,7 +161,16 @@
       opacity: 100,
       onReady: function () { track("trackCustom", "FormLoaded"); },
       onStarted: function () { track("trackCustom", "FormStarted"); },
-      onSubmit: function () { track("track", "Lead"); }
+      onSubmit: function () {
+        track("track", "Lead");
+        // Redirect to booking page with ad parameters preserved
+        var redirectUrl = "https://dsu-booking.vercel.app/";
+        var fbclid = hidden.fbclid;
+        if (fbclid) {
+          redirectUrl += "?fbclid=" + encodeURIComponent(fbclid);
+        }
+        setTimeout(function () { window.location.href = redirectUrl; }, 1200);
+      }
     });
   }
   window.__tfReady = mount;
