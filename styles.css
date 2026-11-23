@@ -64,10 +64,10 @@ h1 em .w>span{animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards,shine 4.5s li
 .lead{color:var(--muted);font-size:clamp(17px,2.2vw,20px);margin-top:22px;max-width:680px;margin-inline:auto}
 
 /* ---------- Marquee ---------- */
-.marquee{margin:26px -20px 54px;overflow:hidden;border-block:1px solid var(--line);padding:18px 0;
+.marquee{margin:26px -20px 54px;overflow:hidden;border-block:1px solid var(--line);padding:18px 0;background:var(--bg);
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
 .marquee .track{display:flex;align-items:center;gap:34px;width:max-content;animation:marq 38s linear infinite}
-.marquee span{font-size:clamp(26px,4.4vw,44px);font-weight:500;letter-spacing:-.02em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.55)}
+.marquee span{font-size:clamp(26px,4.4vw,44px);font-weight:500;letter-spacing:-.02em;white-space:nowrap;color:var(--bg);-webkit-text-stroke:2px #8a8a8a;paint-order:stroke fill}
 .marquee i{width:10px;height:10px;border-radius:50%;background:#fff;flex:none}
 @keyframes marq{to{transform:translateX(-25%)}}
 
@@ -112,11 +112,11 @@ h1 em .w>span{animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards,shine 4.5s li
 /* ---------- Steps ---------- */
 .steps{display:grid;gap:14px;grid-template-columns:1fr;margin:84px auto 0;max-width:920px}
 @media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
-.card{position:relative;overflow:hidden;padding:26px 24px 28px;border:1px solid var(--line);background:var(--card);border-radius:18px;transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1)}
+.card{position:relative;overflow:hidden;padding:26px 24px 28px;border:1px solid var(--line);background:#0b0b0b;border-radius:18px;transition:border-color .3s,transform .4s cubic-bezier(.2,.7,.2,1)}
 .card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--cx,50%) var(--cy,0%),rgba(255,255,255,.14),transparent 65%);opacity:0;transition:opacity .3s;pointer-events:none}
 .card:hover{border-color:rgba(255,255,255,.4)}
 .card:hover::before{opacity:1}
-.card .big{display:block;font-size:56px;font-weight:500;letter-spacing:-.04em;line-height:1;margin-bottom:22px;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.7)}
+.card .big{display:block;font-size:56px;font-weight:500;letter-spacing:-.04em;line-height:1;margin-bottom:22px;color:#0b0b0b;-webkit-text-stroke:2px #b0b0b0;paint-order:stroke fill}
 .card h3{font-size:20px;font-weight:500;margin-bottom:6px}
 .card p{font-size:15px;color:var(--muted);line-height:1.5}
 
