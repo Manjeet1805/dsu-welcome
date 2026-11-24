@@ -8,5 +8,5 @@ window.SITE_CONFIG = {
   TYPEFORM_ID: "Mw4TdeMV",
   TYPEFORM_DOMAIN: "dsutrain.typeform.com",
   // Optional: Meta Pixel ID. Leer lassen = kein Tracking.
-  PIXEL_ID: ""
+  PIXEL_ID: "1383668580631493"
 };

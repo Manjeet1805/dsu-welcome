@@ -163,6 +163,7 @@
       onStarted: function () { track("trackCustom", "FormStarted"); },
       onSubmit: function () {
         track("track", "Lead");
+        track("trackCustom", "TypeformSubmit");
         // Redirect immediately to booking page with ad parameters preserved
         // Must fire before Typeform's own redirect (if configured in dashboard)
         var redirectUrl = "https://dsu-booking.vercel.app/";
