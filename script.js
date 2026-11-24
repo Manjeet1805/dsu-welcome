@@ -163,13 +163,15 @@
       onStarted: function () { track("trackCustom", "FormStarted"); },
       onSubmit: function () {
         track("track", "Lead");
-        // Redirect to booking page with ad parameters preserved
+        // Redirect immediately to booking page with ad parameters preserved
+        // Must fire before Typeform's own redirect (if configured in dashboard)
         var redirectUrl = "https://dsu-booking.vercel.app/";
-        var fbclid = hidden.fbclid;
-        if (fbclid) {
-          redirectUrl += "?fbclid=" + encodeURIComponent(fbclid);
-        }
-        setTimeout(function () { window.location.href = redirectUrl; }, 1200);
+        var pairs = [];
+        Object.keys(hidden).forEach(function (k) {
+          if (hidden[k]) pairs.push(encodeURIComponent(k) + "=" + encodeURIComponent(hidden[k]));
+        });
+        if (pairs.length) redirectUrl += "?" + pairs.join("&");
+        window.location.replace(redirectUrl);
       }
     });
   }
